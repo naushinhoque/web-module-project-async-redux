@@ -1,12 +1,54 @@
-import React from 'react';
-import './App.css';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { fetchBreeds } from './Action/actions';
 
-function App() {
+
+const App = ({ breeds, fetchBreeds }) => {
+  useEffect(() => {
+    fetchBreeds();
+  }, [fetchBreeds]);
+
   return (
-    <div className="App">
-      Async Redux Project
+    <div className="dog-container">
+      {breeds.map((breed, index) => (
+        <div className="dog-box" key={index}>
+          <img
+            src={`https://dog.ceo/api/img/${breed}.jpg`} // Construct image URL using the breed
+            alt={breed}
+            className="dog-image"
+          />
+          <div className="breed-name">{breed}</div>
+        </div>
+      ))}
     </div>
   );
-}
+};
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    breeds:state.breeds
+  };
+};
+
+export default connect(mapStateToProps, { fetchBreeds })(App);
+
+// import { useDispatch, useSelector } from 'react-redux';
+// import { fetchBreeds } from './Action/actions'
+// import './App.css';
+
+// function App() {
+//   const dispatch = useDispatch();
+//   const breeds = useSelector((state) => state.breeds);
+
+//   useEffect(() => {
+//     dispatch(fetchBreeds());
+//   }, [dispatch]);
+
+//   return (
+//     <div className="App">
+//       {breeds.map((breed) => (
+//         <div key={breed}>{breed}</div>
+//       ))}
+//     </div>
+//   );
+// }
