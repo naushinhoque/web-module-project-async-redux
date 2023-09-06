@@ -13,7 +13,7 @@ const App = ({ breeds, fetchBreeds }) => {
       {breeds.map((breed, index) => (
         <div className="dog-box" key={index}>
           <img
-            src={`https://dog.ceo/api/img/${breed}.jpg`} // Construct image URL using the breed
+            src={`https://dog.ceo/api/img/${breed}.jpg`} 
             alt={breed}
             className="dog-image"
           />

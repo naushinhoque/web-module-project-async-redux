@@ -41,28 +41,28 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Adjust the gap between boxes as needed */
+  gap: 20px; 
 }
 
 /* CSS for individual dog image and breed name boxes */
 .dog-box {
   text-align: center;
   background-color: #f2f2f2; /* Background color for the boxes */
-  padding: 10px; /* Adjust padding as needed */
+  padding: 10px; 
   border-radius: 5px; /* Add rounded corners to the boxes */
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the boxes */
-  width: 200px; /* Adjust the width of the boxes as needed */
+  width: 200px; 
 }
 
 /* CSS for the dog image */
 .dog-image {
   max-width: 100%;
   height: auto;
-  border-radius: 5px; /* Optional: Add rounded corners to the image */
+  border-radius: 5px; 
 }
 
 /* CSS for the breed name */
 .breed-name {
-  margin-top: 10px; /* Adjust the space between the image and breed name */
-  font-weight: bold; /* Optional: Make the breed name bold */
+  margin-top: 10px; 
+  font-weight: bold; 
 }

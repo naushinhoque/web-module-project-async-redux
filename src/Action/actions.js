@@ -11,7 +11,6 @@ export const setBreeds = (breeds) => {
 export const fetchBreeds = () => {
     return async (dispatch) => {
       try {
-        // Perform the API request here and get the data
         const response = await fetch('https://dog.ceo/api/breeds/list/all');
         const data = await response.json();
   
