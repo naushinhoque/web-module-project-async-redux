@@ -66,3 +66,14 @@
   margin-top: 10px; 
   font-weight: bold; 
 }
+
+.element-with-background {
+  background-image: url('./path-to-your-image.jpg');
+  /* Other background properties can be added here */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  /* Other styling properties for img elements can be added here */
+}

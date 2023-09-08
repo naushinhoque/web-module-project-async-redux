@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchBreeds } from './Action/actions';
+import dogImage from './dog1.jpg';
 
 
 const App = ({ breeds, fetchBreeds }) => {
@@ -12,11 +13,12 @@ const App = ({ breeds, fetchBreeds }) => {
     <div className="dog-container">
       {breeds.map((breed, index) => (
         <div className="dog-box" key={index}>
-          <img
+          <img src={dogImage} alt="Dog" />
+          {/* <img
             src={`https://dog.ceo/api/img/${breed}.jpg`} 
             alt={breed}
             className="dog-image"
-          />
+          /> */}
           <div className="breed-name">{breed}</div>
         </div>
       ))}
